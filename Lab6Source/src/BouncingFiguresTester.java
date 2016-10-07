@@ -16,7 +16,7 @@ public class BouncingFiguresTester {
 
 		// Create a box to put all objects in
 		BouncingBox box = new BouncingBox();
-		
+
 		// Add all the components to the box
 		BouncingFigure square1 = new BouncingRectangle(0, 0, 10, 10, 325.0, 100);
 		box.add(square1);
@@ -30,21 +30,21 @@ public class BouncingFiguresTester {
 		box.add(circle2);
 		BouncingFigure circle3 = new BouncingCircle(90, 300, 30, 30, 220.0, 200);
 		box.add(circle3);
-		
+
 		frame.add(box);
-		
+
 		// Make the frame visible
 		frame.setVisible(true);
-		
+
 		// Continuously update the frame since some components will change position
 		while(true) {
 			try{
 				Thread.sleep(100); // Wait for 0.1 second = 100 milliseconds
 			}
 			catch(InterruptedException e){}
-			
+
 			frame.repaint();
-			
+
 		} // end while
 
 	}//end main

@@ -1,7 +1,5 @@
 import java.awt.Graphics;
 
-import javax.swing.JComponent;
-
 public abstract class BouncingFigure {
 
 	private int xLeft = 0;
@@ -82,7 +80,7 @@ public abstract class BouncingFigure {
 		System.out.println("xPosition=" + this.xLeft);
 		System.out.println("yPosition=" + this.yTop);
 	}
-	
+
 	// Abstract methods to be implemented by subclasses
 	public abstract void draw(Graphics g);
 	public abstract boolean rightBorderCollision(int screenLimit);

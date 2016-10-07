@@ -32,7 +32,7 @@ public class BouncingRectangle extends BouncingFigure {
 			return true;
 		return false;
 	}
-	
+
 	public boolean leftBorderCollision(){
 		if(getXLeft() < 0)
 			return true;
