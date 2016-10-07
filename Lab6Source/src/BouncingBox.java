@@ -4,10 +4,6 @@ import javax.swing.JComponent;
 
 public class BouncingBox extends JComponent {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7042742882532788851L;
 	private ArrayList<BouncingFigure> figures = new ArrayList<BouncingFigure>();
 
 	public void add(BouncingFigure f) {
