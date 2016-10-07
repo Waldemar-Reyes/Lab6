@@ -1,3 +1,4 @@
+import java.awt.Container;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.JComponent;
@@ -13,44 +14,38 @@ public class BouncingBox extends JComponent {
 	public void paintComponent(Graphics g) {
 		for (BouncingFigure f : figures) {
 			f.draw(g); f.move();
-			if (f.rightBorderCollision(600) == true) {
+			if (f.rightBorderCollision(this.getParent().getWidth()) == true) {
 				if (f.getTrajectory() < 90) {
-					f.setTrajectory(f.getTrajectory()-90);
+					f.setTrajectory(180 - f.getTrajectory());
 				}
 				else {
-					f.setTrajectory(f.getTrajectory()-90);
+					f.setTrajectory((360-f.getTrajectory())+180);
 				}
-				System.out.println(f.getTrajectory());
 			}
 			if (f.leftBorderCollision() == true) {
 				if (f.getTrajectory() < 180) {
-					f.setTrajectory(f.getTrajectory()-90);
+					f.setTrajectory(180-f.getTrajectory());
 				}
 				else {
-					f.setTrajectory(f.getTrajectory()+90);
+					f.setTrajectory(360-((f.getTrajectory()-180)));
 				}
 			}
 			if (f.upperBorderCollision() == true) {
 				if (f.getTrajectory() < 90) {
-					f.setTrajectory(f.getTrajectory()+270);
+					f.setTrajectory((90-f.getTrajectory())+270);
 				}
 				else {
-					f.setTrajectory(f.getTrajectory()+90);
+					f.setTrajectory(270-(f.getTrajectory()-90));
 				}
-				System.out.println(f.getTrajectory());
 			}
-			if (f.lowerBorderCollision(600) == true) {
+			if (f.lowerBorderCollision(this.getParent().getHeight()) == true) {
 				if (f.getTrajectory() < 270) {
-					f.setTrajectory(f.getTrajectory()-90);
+					f.setTrajectory((270-f.getTrajectory())+90);
 				}
 				else {
-					f.setTrajectory(f.getTrajectory()+90);
+					f.setTrajectory(90-(f.getTrajectory()-270));
 				}
-				System.out.println(f.getTrajectory());
 			}
-			
-			// Add code here for Lab Q5
-			//
 		}
 	}
 }

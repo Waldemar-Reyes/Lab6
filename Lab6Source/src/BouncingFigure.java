@@ -67,20 +67,20 @@ public abstract class BouncingFigure {
 
 
 		//current values, for debugging purposes
-//		System.out.println("Current (x,y) position and vectors values to be added or substracted");
-//		System.out.println("xVector=" +xVector);
-//		System.out.println("yVector=" +yVector);
-//		System.out.println("xPosition=" + this.xLeft);
-//		System.out.println("yPosition=" + this.yTop);
+		System.out.println("Current (x,y) position and vectors values to be added or substracted");
+		System.out.println("xVector=" +xVector);
+		System.out.println("yVector=" +yVector);
+		System.out.println("xPosition=" + this.xLeft);
+		System.out.println("yPosition=" + this.yTop);
 
 		//moving to the new coordinates by addition
 		this.xLeft=this.xLeft+xVector;
 		this.yTop=this.yTop+yVector;
 
 		//new positions on the (x,y) plane for debugging purposes
-//		System.out.println("New (x,y) position with vectors values updated");
-//		System.out.println("xPosition=" + this.xLeft);
-//		System.out.println("yPosition=" + this.yTop);
+		System.out.println("New (x,y) position with vectors values updated");
+		System.out.println("xPosition=" + this.xLeft);
+		System.out.println("yPosition=" + this.yTop);
 	}
 	
 	// Abstract methods to be implemented by subclasses

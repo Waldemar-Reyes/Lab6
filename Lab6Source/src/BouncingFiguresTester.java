@@ -18,16 +18,18 @@ public class BouncingFiguresTester {
 		BouncingBox box = new BouncingBox();
 		
 		// Add all the components to the box
-//		BouncingFigure figure1 = new BouncingRectangle(0, 0, 10, 10, 325.0, 100);
-//		box.add(figure1);
-//		BouncingFigure figure2 = new BouncingRectangle(0, 500, 10, 10, 45.0, 50);
-//		box.add(figure2);
-		BouncingFigure figure3 = new BouncingRectangle(100, 100, 25, 25, 325.0, 150);
-		box.add(figure3);
-//		BouncingFigure figure4 = new BouncingRectangle(250, 100, 20, 20, 45.0, 50);
-//		box.add(figure4);
-//		BouncingFigure figure5 = new BouncingRectangle(250, 50, 10, 10, 325.0, 80);
-//		box.add(figure5);
+		BouncingFigure square1 = new BouncingRectangle(0, 0, 10, 10, 325.0, 100);
+		box.add(square1);
+		BouncingFigure square2 = new BouncingRectangle(0, 500, 20, 20, 45.0, 50);
+		box.add(square2);
+		BouncingFigure square3 = new BouncingRectangle(200, 400, 25, 25, 120.0, 150);
+		box.add(square3);
+		BouncingFigure circle1 = new BouncingCircle(200, 400, 25, 25, 330.0, 150);
+		box.add(circle1);
+		BouncingFigure circle2 = new BouncingCircle(250, 50, 40, 40, 50.0, 100);
+		box.add(circle2);
+		BouncingFigure circle3 = new BouncingCircle(90, 300, 30, 30, 220.0, 200);
+		box.add(circle3);
 		
 		frame.add(box);
 		
